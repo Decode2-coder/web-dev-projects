@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Interest Calculator</title>
+    <style>
+      body {
+        font-family: "italic", inherit;
+        background-color: #f7f7f7;
+        margin: 50px;
+      }
+      h1 {
+        color: #333;
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      label {
+        font-weight: bold;
+        font-size: 24px;
+        display: block;
+        margin: 10px 0;
+      }
+      input[type="number"] {
+        width: 200px;
+        padding: 10px;
+        border: 2px solid #f50e0e;
+        border-radius: 5px;
+        font-size: 20px;
+      }
+      button {
+        padding: 15px 30px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 24px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      #result {
+        font-size: 28px;
+        font-weight: bold;
+        color: #333;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Simple Interest Calculator</h1>
+    <label for="principal">Principal Amount:</label>
+    <br />
+    <input
+      type="number"
+      id="principal"
+      placeholder="Enter
+Principal Amount"
+    />
+    <br />
+    <label for="rate">Interest Rate (% per year):</label>
+    <br />
+    <input
+      type="number"
+      id="rate"
+      placeholder="Enter
+Interest Rate"
+    />
+    <br />
+    <label for="time">Time Period (in years):</label>
+    <br />
+    <input
+      type="number"
+      id="time"
+      placeholder="Enter Time
+Period"
+    />
+    <br />
+    <button onclick="calculateInterest()">Calculate</button>
+    <br />
+    <label for="result">Simple Interest:</label>
+    <br />
+    <span id="result">-</span>
+    <script>
+       function calculateInterest() {
+       // Get the input values
+       const principal = parseFloat(document.getElementById("principal").value);
+       const rate = parseFloat(document.getElementById("rate").value);
+       const time = parseFloat(document.getElementById("time").value);
+       // Calculate simple interest
+       const interest = (principal * rate * time) / 100;
+       // Display the result
+       document.getElementById("result").textContent = "Simple Interest: " + interest.toFixed(2);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Mobile-Friendly Page</title>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+    <div class="w-full p-4">
+        <!-- Video Section -->
+        <div class="mb-8">
+            <div class="bg-white rounded-lg shadow-lg p-4">
+                <iframe class="w-full h-48 md:h-96" src="./video/ggop.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <!-- Slider Section -->
+
+        <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
+            <div class="slider-container">
+                <!-- Slider Buttons -->
+                <div class="flex justify-between items-center mb-2">
+                    <div class="w-1/2 text-center">
+                        <button class="text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out">&#8249; Previous</button>
+                    </div>
+                    <div class="w-1/2 text-center">
+                        <button class="text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out">Next &#8250;</button>
+                    </div>
+                </div>
+
+                <!-- Slider Text -->
+                <div class="text-center">
+                    <p class="text-lg font-semibold">Text</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

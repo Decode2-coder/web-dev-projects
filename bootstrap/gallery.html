@@ -1,0 +1,53 @@
+<html>
+<head>
+    <style type="text/css">
+        .imgStyle
+        {
+            width:100px;
+            height:100px;
+            border:3px solid grey;
+        }
+    </style>
+</head>
+<body>
+    <img id="mainImage" style="border:3px solid grey" src="Images/hydrangeas.jpg" height="500px" width="540x"/>
+    <br />
+    <div id="divId" onclick="changeImageOnClick(event)">
+        <img class="imgStyle" src="Images/hydrangeas.jpg" />
+
+        <img class="imgStyle" src="Images/Jellyfish.jpg" />
+        <img class="imgStyle" src="Images/koala.jpg" />
+        <img class="imgStyle" src="Images/penguins.jpeg" />
+        <img class="imgStyle" src="Images/tulips.jpg" />
+    </div>
+    <script type="text/javascript">
+
+        var images = document.getElementById("divId") .getElementsByTagName("img");
+
+        for (var i = 0; i < images.length; i++)
+        {
+            images[i].onmouseover = function ()
+            {
+                this.style.cursor = 'hand';
+                this.style.borderColor = 'red';
+            }
+            images[i].onmouseout = function ()
+            {
+                this.style.cursor = 'pointer';
+                this.style.borderColor = 'grey';
+            }
+        }
+
+        function changeImageOnClick(event)
+        {
+            event = event || window.event;
+            var targetElement = event.target || event.srcElement;
+
+            if (targetElement.tagName == "IMG")
+            {
+                mainImage.src = targetElement.getAttribute("src");
+            }
+        }
+    </script>
+</body>
+</html>
